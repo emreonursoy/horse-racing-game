@@ -1,4 +1,4 @@
-# Horse Racing Game
+# 🐎 Horse Racing Game
 
 A web-based horse racing simulation game built with Vue 3. Generate horses, create race schedules, and watch them compete across multiple rounds with real-time race tracking and results.
 
