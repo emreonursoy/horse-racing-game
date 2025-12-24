@@ -1,0 +1,50 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color $transition-base,
+    opacity $transition-base;
+
+  &--primary {
+    background-color: $color-primary;
+    color: $color-text-inverse;
+
+    &:hover:not(:disabled) {
+      background-color: $color-primary-hover;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: $color-secondary-foreground;
+
+    &:hover:not(:disabled) {
+      background-color: $color-muted;
+    }
+  }
+
+  &--danger {
+    background-color: $color-danger;
+    color: $color-text-primary;
+
+    &:hover:not(:disabled) {
+      background-color: $color-danger-hover;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+  }
+}

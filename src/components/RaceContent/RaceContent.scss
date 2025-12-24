@@ -1,0 +1,106 @@
+.race-content__layout {
+  height: 100%;
+  gap: $spacing-lg;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow: hidden;
+  display: flex;
+  padding: $spacing-md;
+}
+
+  > * {
+    min-width: 0;
+    min-height: 0;
+  }
+
+
+.race-content__section-horses {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 300px;
+}
+
+.race-content__section-race-program {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  flex: 1.5;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.race-content__section-race-track {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+// Tablet styles (1024px and below)
+@media (max-width: 1024px) {
+  .race-content__section-race-track {
+    flex: 0.5;
+  }
+
+  .race-content__layout {
+    gap: $spacing-md;
+  }
+}
+
+// Mobile styles (768px and below)
+@media (max-width: 768px) {
+  .race-content__layout {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .race-content__section-horses,
+  .race-content__section-race-program,
+  .race-content__section-race-track {
+    overflow: visible;
+    overflow-y: visible;
+    flex: none;
+    min-height: fit-content;
+    max-width: unset;
+  }
+}
+
+// Small mobile styles (480px and below)
+@media (max-width: 480px) {
+  .race-content__layout {
+    padding: $spacing-md;
+    flex-wrap: unset;
+    gap: $spacing-sm;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .race-content__section-horses {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    overflow-y: visible;
+    min-height: fit-content;
+  }
+
+  .race-content__section-race-program,
+  .race-content__section-race-track {
+    overflow: visible;
+    overflow-y: visible;
+    flex: none;
+    min-height: fit-content;
+  }
+}

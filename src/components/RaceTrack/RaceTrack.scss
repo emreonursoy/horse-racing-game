@@ -1,0 +1,139 @@
+.track {
+  margin: $spacing-lg 0;
+  flex: 1;
+}
+
+.track__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+  padding: $spacing-sm $spacing-lg;
+  background-color: $color-bg-tertiary;
+  border-radius: $radius-xs;
+}
+
+.track__distance {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  color: $color-text-primary;
+}
+
+.track__status {
+  font-size: $font-size-sm;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.track__container {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-grass;
+  padding: $spacing-md 0;
+  border-radius: $radius-md;
+}
+
+.track__lane {
+  display: flex;
+  align-items: center;
+}
+
+.track__lane-number {
+  min-width: 32px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  color: $color-white;
+  rotate: -90deg;
+}
+
+.track__path {
+  position: relative;
+  flex: 1;
+  height: 40px;
+  background: linear-gradient(to right, $color-track-lane 0%, $color-track 50%, $color-muted 100%);
+  border-radius: $radius-xs;
+  overflow: hidden;
+  border: 2px solid $color-border-dark;
+}
+
+.track__runner {
+  height: 100%;
+  border-radius: $radius-xs;
+  position: relative;
+  width: 0%;
+  transition: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $spacing-xs;
+  position: relative;
+
+  &--racing {
+    animation: run linear forwards;
+  }
+}
+
+.track__horse-name {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-sm;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.track__horse-icon {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+@keyframes run {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.track__finish-line {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: repeating-linear-gradient(
+    to bottom,
+    $color-black 0px,
+    $color-black 10px,
+    $color-white 10px,
+    $color-white 20px
+  );
+  z-index: $z-index-dropdown;
+}
+
+.track_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-sm $spacing-lg;
+  background-color: $color-bg-tertiary;
+  border-radius: $radius-xs;
+  margin-top: $spacing-md;
+}

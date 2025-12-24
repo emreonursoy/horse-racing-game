@@ -1,0 +1,128 @@
+.race-winners {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.race-winners__lap {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  background-color: $color-bg-tertiary;
+  border-radius: $radius-md;
+  border: 1px solid $color-border;
+}
+
+.race-winners__lap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: $spacing-sm;
+  border-bottom: 1px solid $color-border;
+}
+
+.race-winners__lap-title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.race-winners__podium {
+  display: flex;
+  gap: $spacing-md;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.race-winners__medal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md;
+  border-radius: $radius-md;
+  min-width: 120px;
+  flex: 1;
+  max-width: 200px;
+  transition:
+    transform $transition-base,
+    box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.race-winners__medal--gold {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%);
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+
+  .medal-icon--gold {
+    fill: #ffd700;
+    filter: drop-shadow(0 2px 4px rgba(255, 215, 0, 0.5));
+  }
+}
+
+.race-winners__medal--silver {
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.15) 0%, rgba(192, 192, 192, 0.05) 100%);
+  border: 2px solid rgba(192, 192, 192, 0.4);
+  box-shadow: 0 4px 12px rgba(192, 192, 192, 0.2);
+
+  .medal-icon--silver {
+    fill: #c0c0c0;
+    filter: drop-shadow(0 2px 4px rgba(192, 192, 192, 0.5));
+  }
+}
+
+.race-winners__medal--bronze {
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.15) 0%, rgba(205, 127, 50, 0.05) 100%);
+  border: 2px solid rgba(205, 127, 50, 0.4);
+  box-shadow: 0 4px 12px rgba(205, 127, 50, 0.2);
+
+  .medal-icon--bronze {
+    fill: #cd7f32;
+    filter: drop-shadow(0 2px 4px rgba(205, 127, 50, 0.5));
+  }
+}
+
+.race-winners__medal-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .medal-icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.race-winners__medal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xs;
+  text-align: center;
+}
+
+.race-winners__horse-name {
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .race-winners__podium {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .race-winners__medal {
+    width: 100%;
+  }
+}

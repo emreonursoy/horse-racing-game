@@ -1,0 +1,127 @@
+.race-program {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: $spacing-sm;
+}
+
+@media (max-width: 1200px) {
+  .race-program {
+    grid-template-columns: auto;
+  }
+}
+
+.race-program__lap {
+  border: 2px solid $color-border;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  transition: all $transition-slow;
+
+  &--completed {
+    border-color: $color-success;
+    background-color: $color-success-light;
+  }
+}
+
+.race-program__header {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-md;
+  font-weight: $font-weight-semibold;
+}
+
+.race-program__lap-number {
+  font-size: $font-size-lg;
+  color: $color-text-primary;
+}
+
+.race-program__distance {
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+}
+
+.race-program__status {
+  margin-left: auto;
+  font-size: $font-size-sm;
+
+  &--completed {
+    color: $color-success;
+  }
+  &--racing {
+    color: $color-info;
+  }
+  &--waiting {
+    color: $color-warning;
+  }
+}
+
+.race-program__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: $spacing-lg;
+}
+
+.race-program__program,
+.race-program__results {
+  display: flex;
+  flex-direction: column;
+}
+
+.race-program__list-title {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  margin-bottom: $spacing-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.race-program__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.race-program__list-item {
+  padding: $spacing-sm;
+  border-left: 3px solid;
+  border-radius: $radius-xs;
+  background-color: rgba($color-card, 0.5);
+  font-size: $font-size-xs;
+  transition: all $transition-base;
+
+  &:hover {
+    background-color: rgba($color-card, 0.8);
+    transform: translateX(2px);
+  }
+
+  &--empty {
+    color: $color-text-secondary;
+    font-style: italic;
+    border-left-color: $color-border;
+  }
+}
+
+.race-program__result-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.race-program__result-position {
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.race-program__result-name {
+  font-weight: $font-weight-medium;
+  flex: 1;
+}
+
+.race-program__result-time {
+  color: $color-text-secondary;
+  font-size: $font-size-xs;
+}

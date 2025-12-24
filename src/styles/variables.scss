@@ -1,0 +1,154 @@
+/**
+ * CSS Variables (for runtime access in components)
+ * These mirror the SCSS variables for use in Vue components
+ */
+
+@use './theme.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  // Base Colors
+  --background: #{$color-background};
+  --foreground: #{$color-foreground};
+
+  // Card Colors
+  --card: #{$color-card};
+  --card-foreground: #{$color-card-foreground};
+
+  // Primary Colors
+  --primary: #{$color-primary};
+  --primary-foreground: #{$color-primary-foreground};
+
+  // Secondary Colors
+  --secondary: #{$color-secondary};
+  --secondary-foreground: #{$color-secondary-foreground};
+
+  // Muted Colors
+  --muted: #{$color-muted};
+  --muted-foreground: #{$color-muted-foreground};
+
+  // Accent Colors
+  --accent: #{$color-accent};
+  --accent-foreground: #{$color-accent-foreground};
+
+  // Danger/Destructive Colors
+  --destructive: #{$color-destructive};
+  --destructive-foreground: #{$color-destructive-foreground};
+
+  // Border & Input Colors
+  --border: #{$color-border};
+  --input: #{$color-input};
+  --ring: #{$color-ring};
+
+  // Racing Colors
+  --track: #{$color-track};
+  --track-lane: #{$color-track-lane};
+  --grass: #{$color-grass};
+
+  // Legacy color mappings (for backward compatibility)
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-danger: #{$color-danger};
+  --color-success: #{$color-success};
+  --color-white: #{$color-white};
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-bg-primary: #{$color-bg-primary};
+  --color-bg-secondary: #{$color-bg-secondary};
+  --color-border: #{$color-border};
+
+  // Border Radius
+  --radius: #{$radius-default};
+  --radius-xs: #{$radius-xs};
+  --radius-md: #{$radius-md};
+  --radius-full: #{$radius-full};
+
+  // Spacing
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+
+  // Typography
+  --font-size-sm: #{$font-size-sm};
+  --font-size-base: #{$font-size-base};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+
+  // Shadows
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+}
+
+// Base styles
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Orbitron', sans-serif;
+}
+
+// Utility Classes
+.glass-panel {
+  background-color: rgba(29, 35, 48, 0.8); // card with opacity
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(46, 52, 65, 0.5); // border with opacity
+}
+
+// Racing Animations
+@keyframes gallop {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(-2px) scaleY(0.95);
+  }
+}
+
+@keyframes dust {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2) translateX(-20px);
+  }
+}
+
+.animate-gallop {
+  animation: gallop 0.2s ease-in-out infinite;
+}
+
+.animate-dust {
+  animation: dust 0.5s ease-out forwards;
+}

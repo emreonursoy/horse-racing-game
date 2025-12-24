@@ -1,0 +1,46 @@
+.horse-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-xs;
+  transition: background-color $transition-base;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background-color: $color-bg-tertiary;
+
+  &:hover {
+    background-color: $color-background;
+  }
+
+  &__color-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid $color-border;
+    flex-shrink: 0;
+    display: inline-block;
+  }
+
+  &__name {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: $color-text-primary;
+    flex: 1;
+  }
+
+  &__condition-tag {
+    padding: $spacing-xs $spacing-sm;
+    background-color: $color-background;
+    border-radius: $radius-xs;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: $color-text-secondary;
+    border: 1px solid $color-border;
+  }
+
+  &__order {
+    font-size: $font-size-xs;
+    color: $color-text-secondary;
+  }
+}

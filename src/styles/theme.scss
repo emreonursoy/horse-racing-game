@@ -1,0 +1,121 @@
+// Base Colors (converted from HSL to hex)
+$color-background: #141720;
+$color-foreground: #f5f4f0;
+
+// Card Colors
+$color-card: #1d2330;
+$color-card-foreground: #f5f4f0;
+
+// Primary Colors
+$color-primary: #0dd977;
+$color-primary-hover: #0bb866;
+$color-primary-foreground: #141720;
+
+// Secondary Colors
+$color-secondary: #2a2f3d;
+$color-secondary-foreground: #f5f4f0;
+
+// Muted Colors
+$color-muted: #252a35;
+$color-muted-foreground: #7d7f85;
+
+// Accent Colors
+$color-accent: #f5c842;
+$color-accent-foreground: #141720;
+
+// Danger/Error Colors
+$color-danger: #f03d3d;
+$color-danger-hover: #d32f2f;
+$color-destructive: #f03d3d;
+$color-destructive-foreground: #f5f4f0;
+
+// Success Colors
+$color-success: #0dd977;
+$color-success-light: rgba(13, 217, 119, 0.1);
+
+// Neutral Colors
+$color-white: #ffffff;
+$color-black: #000000;
+
+// Warning Colors
+$color-warning: #f5c842;
+
+// Info Colors
+$color-info: #007bff;
+
+// Text Colors
+$color-text-primary: #f5f4f0;
+$color-text-secondary: #7d7f85;
+$color-text-inverse: #141720;
+
+// Background Colors
+$color-bg-primary: #1d2330;
+$color-bg-secondary: #141720;
+$color-bg-tertiary: #252a35;
+
+// Border Colors
+$color-border: #2e3441;
+$color-border-dark: #252a35;
+$color-input: #2e3441;
+
+// Ring/Focus Colors
+$color-ring: #0dd977;
+
+// Racing Colors
+$color-track: #4a3d2e;
+$color-track-lane: #3d3226;
+$color-grass: #2d4a2d;
+$color-winner-glow: #f5c842;
+
+// Header Gradient Colors
+$color-header-start: #0dd977;
+$color-header-end: #0bb866;
+
+// ============================================
+// Border Radius
+// ============================================
+$radius-xs: 4px;
+$radius-md: 8px;
+$radius-full: 9999px;
+$radius-default: 0.75rem;
+
+// ============================================
+// Spacing
+// ============================================
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 12px;
+$spacing-lg: 16px;
+$spacing-xl: 24px;
+
+// ============================================
+// Typography
+// ============================================
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-3xl: 32px;
+
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// ============================================
+// Shadows
+// ============================================
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+// ============================================
+// Transitions
+// ============================================
+$transition-base: 0.2s ease;
+$transition-slow: 0.3s ease;
+
+// ============================================
+// Z-Index
+// ============================================
+$z-index-dropdown: 100;
