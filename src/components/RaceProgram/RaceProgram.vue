@@ -65,7 +65,10 @@
         </div>
       </div>
     </div>
-    <NoDataContainer v-else text="No race schedule generated yet. Click 'Generate Schedule' to create a race program." />
+    <NoDataContainer
+      v-else
+      text="No race schedule generated yet. Click 'Generate Schedule' to create a race program."
+    />
   </Card>
 </template>
 

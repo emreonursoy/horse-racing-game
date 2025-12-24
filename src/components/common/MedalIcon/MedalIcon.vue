@@ -16,4 +16,3 @@ defineProps<{
   customClass?: string
 }>()
 </script>
-

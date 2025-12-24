@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Header from '@/components/Header/Header.vue'
 import RaceContent from '@/components/RaceContent/RaceContent.vue'
-
 </script>
 
 <template>
@@ -12,7 +11,6 @@ import RaceContent from '@/components/RaceContent/RaceContent.vue'
 </template>
 
 <style scoped lang="scss">
-
 .app {
   width: 100vw;
   height: 100vh;
@@ -38,5 +36,4 @@ import RaceContent from '@/components/RaceContent/RaceContent.vue'
     max-height: 100%;
   }
 }
-
 </style>

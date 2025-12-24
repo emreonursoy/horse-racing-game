@@ -17,7 +17,12 @@
       >
         {{ isRaceFinished ? 'Generate new Schedule' : 'Generate Schedule' }}
       </Button>
-      <Button v-if="!isRaceFinished && horses.length > 0 && !isRacing" variant="secondary" :disabled="!canStartRace" @click="handleStartRace">
+      <Button
+        v-if="!isRaceFinished && horses.length > 0 && !isRacing"
+        variant="secondary"
+        :disabled="!canStartRace"
+        @click="handleStartRace"
+      >
         Start Race
       </Button>
       <Button v-if="isRacing && canPause" variant="secondary" @click="handlePauseRace">
@@ -26,9 +31,7 @@
       <Button v-if="isRacing && canResume" variant="secondary" @click="handleResumeRace">
         Resume
       </Button>
-      <Button v-if="canResetRace" variant="danger" @click="handleResetGame">
-        Reset Game
-      </Button>
+      <Button v-if="canResetRace" variant="danger" @click="handleResetGame"> Reset Game </Button>
     </div>
   </header>
 </template>

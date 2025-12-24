@@ -130,20 +130,20 @@ describe('Vuex Store', () => {
 
     describe('generateRaceSchedule', () => {
       it('should generate race schedule with 10 horses per round', async () => {
-      await testStore.dispatch('generateHorses')
-      expect(testStore.state.horses.length).toBe(20) // Ensure we have exactly 20
+        await testStore.dispatch('generateHorses')
+        expect(testStore.state.horses.length).toBe(20) // Ensure we have exactly 20
 
-      await testStore.dispatch('generateRaceSchedule')
+        await testStore.dispatch('generateRaceSchedule')
 
-      const schedule = testStore.state.raceSchedule
-      expect(schedule).not.toBeNull()
-      expect(schedule?.length).toBe(6)
+        const schedule = testStore.state.raceSchedule
+        expect(schedule).not.toBeNull()
+        expect(schedule?.length).toBe(6)
 
-      schedule?.forEach((round: Round, index: number) => {
-        expect(round.roundNumber).toBe(index + 1)
-        expect(round.horses.length).toBe(10) // Each round should have exactly 10 horses
-        expect(round.isCompleted).toBe(false)
-      })
+        schedule?.forEach((round: Round, index: number) => {
+          expect(round.roundNumber).toBe(index + 1)
+          expect(round.horses.length).toBe(10) // Each round should have exactly 10 horses
+          expect(round.isCompleted).toBe(false)
+        })
       })
 
       it('should only generate schedule without regenerating horses', async () => {

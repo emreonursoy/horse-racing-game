@@ -1,35 +1,35 @@
 <template>
-      <div class="race-content__layout">
-        <div class="race-content__section-horses">
-          <HorseList
-            :horses="horses"
-            :currentRound="currentRound"
-            :isRacing="isRacing"
-            :raceSchedule="raceSchedule"
-          />
-        </div>
-        <div class="race-content__section-race-program">
-          <RaceProgram
-          :schedule="raceSchedule"
-          :results="raceResults"
-          :raceSchedule="raceSchedule"
-          :isRacing="isRacing"
-          :currentRound="currentRound"
-        />
-      </div>  
-        <div class="race-content__section-race-track">
-          <RaceWinners :schedule="raceSchedule" :isRaceFinished="isRaceFinished" />
-          <RaceTrack
-            :round="currentRound"
-            :horses="currentRoundHorses || []"
-            :distance="currentRound?.distance || 0"
-            :isRacing="isRacing"
-            :roundNumber="currentRound?.roundNumber"
-            :results="currentRound?.results"
-            :isRaceFinished="isRaceFinished"
-          />
-        </div>
-      </div>
+  <div class="race-content__layout">
+    <div class="race-content__section-horses">
+      <HorseList
+        :horses="horses"
+        :currentRound="currentRound"
+        :isRacing="isRacing"
+        :raceSchedule="raceSchedule"
+      />
+    </div>
+    <div class="race-content__section-race-program">
+      <RaceProgram
+        :schedule="raceSchedule"
+        :results="raceResults"
+        :raceSchedule="raceSchedule"
+        :isRacing="isRacing"
+        :currentRound="currentRound"
+      />
+    </div>
+    <div class="race-content__section-race-track">
+      <RaceWinners :schedule="raceSchedule" :isRaceFinished="isRaceFinished" />
+      <RaceTrack
+        :round="currentRound"
+        :horses="currentRoundHorses || []"
+        :distance="currentRound?.distance || 0"
+        :isRacing="isRacing"
+        :roundNumber="currentRound?.roundNumber"
+        :results="currentRound?.results"
+        :isRaceFinished="isRaceFinished"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -48,7 +48,6 @@ const {
   raceResults,
   isRaceFinished,
 } = useGame()
-
 </script>
 
 <style scoped src="./RaceContent.scss"></style>

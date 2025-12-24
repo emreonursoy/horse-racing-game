@@ -27,12 +27,12 @@ describe('App', () => {
         plugins: [store],
       },
     })
-    
+
     // Initially, horses section should not be visible (horses list is conditionally rendered)
     // Generate horses
     await store.dispatch('generateHorses')
     await wrapper.vm.$nextTick()
-    
+
     // Now horses section should be visible
     expect(wrapper.text()).toContain('Horses')
     expect(wrapper.text()).toContain('Generate Schedule')
@@ -44,12 +44,12 @@ describe('App', () => {
         plugins: [store],
       },
     })
-    
+
     // Generate horses and schedule
     await store.dispatch('generateHorses')
     await store.dispatch('generateRaceSchedule')
     await wrapper.vm.$nextTick()
-    
+
     // Now Start Race button should be visible
     expect(wrapper.text()).toContain('Start Race')
   })

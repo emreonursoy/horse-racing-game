@@ -20,4 +20,3 @@ defineProps<{
   customClass?: string
 }>()
 </script>
-

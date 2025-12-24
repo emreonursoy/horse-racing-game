@@ -9,11 +9,9 @@ This application simulates a horse racing tournament where:
 - **Generate Horses**: Create 20 horses with randomized names and condition values (1-100)
 - **Race Schedule**: Generate a 6-round tournament schedule with varying distances (1200m, 1400m, 1600m, 1800m, 2000m, 2200m)
 - **Race Execution**: Each round features 10 horses racing simultaneously with animated race tracks
-- **Race Control**: Start, pause, and resume races with real-time visual feedback
+- **Race Control**: Start, pause, and resume races
 - **Results & Winners**: View race results for each round and overall tournament winners
 - **Game Reset**: Reset the entire game state to start fresh
-
-The game uses physics-based calculations to determine race outcomes based on horse conditions and race distances, providing a realistic racing simulation experience.
 
 ## Technologies Used
 
